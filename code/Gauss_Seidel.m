@@ -33,7 +33,6 @@ function solved = Gauss_Seidel (A, b, n, itmax, e)
   end  
   
   printf("Iterações feitas: %d\n", it)
-  printf("Erro: %f\n", error)
-  
+  printf("O erro é: %.16f\n", error)  
 
 end

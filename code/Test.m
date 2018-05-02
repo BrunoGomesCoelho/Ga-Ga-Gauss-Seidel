@@ -1,4 +1,5 @@
 function Test()
+  format long
   n = 100;
   error = 10**-10;
   A = Generate_Imput_Matrix(n);
