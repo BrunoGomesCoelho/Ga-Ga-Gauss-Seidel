@@ -12,7 +12,7 @@ function Test()
   if solved == true
     printf("O programa foi corretamente executado e chegou numa resposta\n")
   else
-    printf("O programa atingiu o maximo de iterações e nao chegou numa resposta satisfatoria\n")
+    printf("O programa atingiu o maximo de iteracoes e nao chegou numa resposta satisfatoria\n")
   end
   
   printf("O tempo tempo total foi %d: \n", etime(clock (), t0) )
