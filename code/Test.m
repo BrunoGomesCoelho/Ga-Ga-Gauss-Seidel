@@ -10,11 +10,11 @@ function t1=Test(n, bool_print)
   
   if bool_print == true
     if solved == true
-      printf("O programa foi corretamente executado e chegou numa resposta\n")
+      printf("O programa foi corretamente executado e chegou numa resposta\n");
     else
-      printf("O programa atingiu o maximo de iteracoes e nao chegou numa resposta satisfatoria\n")
+      printf("O programa atingiu o maximo de iteracoes e nao chegou numa resposta satisfatoria\n");
     end
   end
   
-  t1 = etime(clock (), t0)
+  t1 = etime(clock (), t0);
 end

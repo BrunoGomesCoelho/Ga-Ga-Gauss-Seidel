@@ -7,7 +7,7 @@ function Main()
     
   # TODO comentar essa porra
   else
-    second_inp = input("Escolha 'r' para o teste rápido, 'c' para o teste \ completo variando o n em [10, 300] de 10 em 10: ", "s")
+    second_inp = input("Escolha 'r' para o teste rápido, 'c' para o teste \ completo variando o n em [10, 300] de 10 em 10: ", "s");
     if second_inp == 'r'
       time_taken = Test(100, true);
       printf("O tempo tempo total foi %d: \n", time_taken);
