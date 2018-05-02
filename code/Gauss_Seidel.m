@@ -1,10 +1,10 @@
-function solved = Gauss_Seidel (A, b, n, itmax, e)
+function solved = Gauss_Seidel (A, b, n, itmax, e, bool_print)
   xk = zeros(n,1);
   xkmais = zeros(n,1);
   error = Inf;
   solved = false;
-  
-  for it = 1: itmax 
+    
+  for it = 1:itmax 
     if (error <= e )
       solved = true;
       break;
@@ -26,13 +26,15 @@ function solved = Gauss_Seidel (A, b, n, itmax, e)
       xkmais(i) = (b(i) - sum1 - sum2)/A(i,i);
     end
     
-
     error = norm(xkmais - xk, inf);
     xk = xkmais;
     xkmais = zeros(n,1);
   end  
   
-  printf("Iteracoes feitas: %d\n", it)
-  printf("Erro: %.16f\n", error)  
-
+  # If we want to print the results
+  if bool_print == true
+    printf("Iteracoes feitas: %d\n", it)
+    printf("Erro: %.16f\n", error)
+  end
+  
 end

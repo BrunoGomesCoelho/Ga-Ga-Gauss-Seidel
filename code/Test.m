@@ -1,20 +1,20 @@
-function Test()
+function t1=Test(n, bool_print)
   format long
-  n = 100;
   error = 10**-10;
   A = Generate_Input_Matrix(n);
   b = Generate_Input_Vector_c(n);
 
   # Rodar e calcular tempo
   t0 = clock ();
-  solved = Gauss_Seidel(A, b, n, intmax-2, error);
+  solved = Gauss_Seidel(A, b, n, intmax-2, error, bool_print);
   
-  if solved == true
-    printf("O programa foi corretamente executado e chegou numa resposta\n")
-  else
-    printf("O programa atingiu o maximo de iteracoes e nao chegou numa resposta satisfatoria\n")
+  if bool_print == true
+    if solved == true
+      printf("O programa foi corretamente executado e chegou numa resposta\n")
+    else
+      printf("O programa atingiu o maximo de iteracoes e nao chegou numa resposta satisfatoria\n")
+    end
   end
   
-  printf("O tempo tempo total foi %d: \n", etime(clock (), t0) )
-
+  t1 = etime(clock (), t0)
 end
