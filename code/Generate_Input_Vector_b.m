@@ -1,4 +1,4 @@
-function b = Generate_Imput_Vector_b(n,A)
+function b = Generate_Input_Vector_b(n,A)
 
   b = ones(n,1);
 

@@ -1,4 +1,4 @@
-function A= Generate_Imput_Matrix(n)
+function A= Generate_Input_Matrix(n)
    
   A = zeros(n,n);
 
