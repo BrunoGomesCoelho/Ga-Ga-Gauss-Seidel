@@ -1,10 +1,12 @@
-function Gauss_Seidel (A, b, n, itmax, e)
+function solved = Gauss_Seidel (A, b, n, itmax, e)
   xk = zeros(n,1);
   xkmais = zeros(n,1);
   error = Inf;
+  solved = false;
   
   for it = 1: itmax 
     if (error <= e )
+      solved = true;
       break;
     end
   
@@ -25,9 +27,13 @@ function Gauss_Seidel (A, b, n, itmax, e)
     end
     
 
-    error = norm(xkmais - xk, inf)
+    error = norm(xkmais - xk, inf);
     xk = xkmais;
     xkmais = zeros(n,1);
-  end
+  end  
   
+  printf("Iterações feitas: %d\n", it)
+  printf("Erro: %f\n", error)
+  
+
 end
