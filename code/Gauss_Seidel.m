@@ -31,7 +31,7 @@ function solved = Gauss_Seidel (A, b, n, itmax, e, bool_print)
     xkmais = zeros(n,1);
   end  
   
-  # If we want to print the results
+  # Imprimir resultados
   if bool_print == true
     printf("Iteracoes feitas: %d\n", it)
     printf("Erro: %.16f\n", error)
